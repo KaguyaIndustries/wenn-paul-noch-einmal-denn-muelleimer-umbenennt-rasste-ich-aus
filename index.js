@@ -12,6 +12,15 @@ const FIXED_NAME = originname;
 
 client.once('ready', () => {
     console.log(`Gatekeeper readyy`);
+
+    client.user.setActivity({
+        activities: [{
+            name: 'Mülleimer Channel',
+            type: ActivityType.Watching,
+            url: 'https://catb.it'
+        }],
+        status: 'dnd'
+    })
 });
 
 client.on('channelUpdate', async (oldChannel, newChannel) => {
@@ -26,14 +35,5 @@ client.on('channelUpdate', async (oldChannel, newChannel) => {
         }
     }
 });
-
-client.user.setActivity({
-    activities: [{
-        name: 'Mülleimer Channel',
-        type: ActivityType.Watching,
-        url: 'https://catb.it'
-    }],
-    status: 'dnd'
-})
 
 client.login(token);
