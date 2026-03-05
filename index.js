@@ -13,7 +13,7 @@ const FIXED_NAME = originname;
 client.once('ready', () => {
     console.log(`Gatekeeper readyy`);
 
-    client.user.setActivity({
+    client.user.setPresence({
         activities: [{
             name: 'Mülleimer Channel',
             type: ActivityType.Watching,
